@@ -1,0 +1,19 @@
+package com.example.Gerenciamento.Clinica.Service.Clinica;
+
+import com.example.Gerenciamento.Clinica.Entity.ClinicaVeterinaria;
+import com.example.Gerenciamento.Clinica.Repository.ClinicaVeterinariaRepository;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CadastrarClinicas {
+
+    private final ClinicaVeterinariaRepository repository;
+
+    public CadastrarClinicas(ClinicaVeterinariaRepository repository){
+        this.repository = repository;
+    }
+
+    public ClinicaVeterinaria cadastrar(ClinicaVeterinaria clinica) {
+        return repository.save(clinica);
+    }
+}

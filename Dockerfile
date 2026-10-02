@@ -2,7 +2,7 @@ FROM maven:3.9-eclipse-temurin-21 AS build
 
 WORKDIR /app
 
-COPY pom.xml .
+COPY Gerenciamento-Clínica/pom.xml .
 
 RUN mvn -B dependency:go-offline
 
